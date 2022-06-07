@@ -8,7 +8,7 @@
 #include "msm8916-handsome-openstick-common.dtsi"
 
 / {
-	model = "Handsome OpenStick UZ801";
+	model = "OpenStick UZ801";
 	compatible = "handsome,openstick", "qcom,msm8916";
 
 	gpio-keys {

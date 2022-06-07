@@ -1,0 +1,18 @@
+--- drivers/input/touchscreen/zinitix.c
++++ drivers/input/touchscreen/zinitix.c
+@@ -548,15 +583,6 @@ static int zinitix_ts_probe(struct i2c_client *client)
+ 		return -EINVAL;
+ 	}
+ 
+-	error = devm_request_threaded_irq(&client->dev, client->irq,
+-					  NULL, zinitix_ts_irq_handler,
+-					  IRQF_ONESHOT | IRQF_NO_AUTOEN,
+-					  client->name, bt541);
+-	if (error) {
+-		dev_err(&client->dev, "Failed to request IRQ: %d\n", error);
+-		return error;
+-	}
+-
+ 	return 0;
+ }
+ 
